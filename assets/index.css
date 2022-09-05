@@ -1,3 +1,7 @@
+:root {
+  transition: all 0.3s ease-out;
+}
+
 @font-face {
   font-family: 'Caveat';
   font-weight: 400 700;
@@ -6,68 +10,22 @@
   src: url("/assets/caveat-subset.woff2") format("woff2");
 }
 
-
-/* Defaults */
-:root {
-}
-
-/* Theme colors */
-:root {
-  --color-gray-20: #e0e0e0;
-  --color-gray-50: #C0C0C0;
-  --color-gray-90: #333;
-
-  --background-color: #444444;
-
-  --text-color: var(--color-gray-90);
-  --text-color-link: #082840;
-  --text-color-link-visited: #17050F;
-}
-
-
-/* Global stylesheet */
-
 html,
 body {
   padding: 0;
   margin: 0;
   font-family: 'Caveat', cursive;
   font-size:1.2rem;
-  color: var(--text-color);
+  color: #010101;
   border: 5px solid #6BBC82;
   background-image: url('bg.png');
   background-size: 512px 512px;	
-}
-
-.flex-break {
-  flex-basis: 100%;
-  height: 0;
-}
-
-/* Nav */
-.nav {
-  padding: 0;
-  list-style: none;
-  float: left;
-  margin-left: 1em;
-}
-.nav-item {
-  display: inline-block;
-  margin-right: 1em;
-}
-.nav-item a[href]:not(:hover) {
-  text-decoration: none;
-}
-.nav-item-active {
-  font-weight: 700;
-  text-decoration: underline;
 }
 
 #photogallery {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  padding-bottom: 4rem;
 }
 
 /* Images */
@@ -77,15 +35,12 @@ body {
   display: inline-block;
   margin: 1rem;
   cursor: url('cursor.png'), pointer;
-  transition: all 0.3s ease-out;
-
 }
 
 .gallery-img:hover{
   -webkit-box-shadow: 0px 0px 0px 0.5rem #6BBC82;
   -moz-box-shadow: 0px 0px 0px 0.5rem #6BBC82;
   box-shadow: 0px 0px 0px 0.5rem #6BBC82;
-  transition: all 0.3s ease-out;
 
 }
 
@@ -105,71 +60,47 @@ body {
 .title-h2 {
   font-size: 3rem;
   text-align: center;
-  margin-top: 0.5rem;
-  margin-bottom: 3rem;
+  margin: 0.5rem auto 3rem auto;
+  max-width: 60%;
   }
 
-.welcome-text {
-  font-size: 1.2rem;
-  width: 40ch;
+
+.box {
+  border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+  margin: 2rem auto 3rem auto;
   max-width: 60%;
-  margin-left:auto;
-  margin-right:auto;
-  margin-top: 2rem;
-  margin-bottom: 3rem;
-  padding-top: 0.5rem;
+  padding: 0.5rem 1.5rem 0.5rem 1.5rem;
   padding-bottom: 0.5rem;
   padding-left: 1.5rem;
   padding-right: 1.5rem;
-  border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
-  border: 2px solid #fffaea;
-  background-color: #cbec95;
-  transition: all 0.3s ease-out;
-  transform: rotate(3deg);
+  padding-top: 0.5rem;
   text-align:center;
 }
-
-/* .welcome-text:hover {
-background-color: #ffffff;
-transition: all 0.3s ease-out;
-border: 2px solid #ffffff;
-box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
-} */
+.welcome-text {
+  width: 40ch;
+  background-color: #cbec95;
+  transform: rotate(3deg);
+}
 
 .information-text {
   width: 60ch;
-  max-width: 60%;
-  margin-left:auto;
-  margin-right:auto;
-  margin-top: 2rem;
-  margin-bottom: 2rem;
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
   background-color: #92d8a6;
-  border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
-  transition: all 0.3s ease-out;
   transform: rotate(-3deg);
-  text-align:center;
 }
 
-/* .information-text:hover {
-  background-color: #ffffff;
-  transition: all 0.3s ease-out;
-  box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
-  } */
-
-a {
-  text-decoration: none;
-  cursor: url('cursor.png'), pointer;
-  color:#94086a;
-}
 
 .bold {
   font-variation-settings: "wght" 700;
+  cursor: url('dog.png'), grab;
 }
 
 .regular {
   font-variation-settings: "wght" 400;
+}
+
+footer {
+  margin: 2rem auto 2rem auto;
+  text-align: center;
+  font-family: monospace;
+  font-size: 0.8rem;
 }
