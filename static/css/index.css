@@ -1,4 +1,4 @@
-:root {
+* {
   transition: all 0.3s ease-out;
 }
 
@@ -7,7 +7,7 @@
   font-weight: 400 700;
   font-display: swap;
   font-style: normal;
-  src: url("/assets/caveat-subset.woff2") format("woff2");
+  src: url("/static/fonts/caveat-subset.woff2") format("woff2");
 }
 
 html,
@@ -18,7 +18,7 @@ body {
   font-size:1.2rem;
   color: #010101;
   border: 5px solid #6BBC82;
-  background-image: url('bg.png');
+  background-image: url('/static/img/bg.png');
   background-size: 512px 512px;	
 }
 
@@ -34,7 +34,7 @@ body {
   width: 300px;
   display: inline-block;
   margin: 1rem;
-  cursor: url('cursor.png'), pointer;
+  cursor: url('/static/img/cat.png'), pointer;
 }
 
 .gallery-img:hover{
@@ -82,16 +82,27 @@ body {
   transform: rotate(3deg);
 }
 
+.goodbye-text {
+  width: 50ch;
+  background-color: #ecea95;
+  transform: rotate(3deg);
+}
+
 .information-text {
   width: 60ch;
   background-color: #92d8a6;
   transform: rotate(-3deg);
+  text-decoration: none;
+}
+
+a {
+  text-decoration: none;
 }
 
 
 .bold {
   font-variation-settings: "wght" 700;
-  cursor: url('dog.png'), grab;
+  cursor: url('/static/img/dog.png'), grab;
 }
 
 .regular {
