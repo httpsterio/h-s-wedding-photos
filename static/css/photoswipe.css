@@ -201,7 +201,6 @@ and show (for example fade in) when PhotoSwipe is opened
 	height: 60px;
 	padding: 0;
 	margin: 0;
-	overflow: hidden;
 	cursor: pointer;
 	background: none;
 	border: 0;
@@ -293,6 +292,19 @@ div.pswp__img--placeholder,
   margin-right: 6px;
 }
 
+.download-button {
+  background: #519163 !important;
+  font-size: 0.8rem;
+  color: #fff;
+  overflow: visible!important;
+  margin-left: -4rem;
+  margin-top: 0.4rem;
+  width: 6rem;
+  padding: 0.5rem 0 0.5rem 0;
+  border-radius: 0.5rem;
+  border: 0;
+  cursor:pointer; 
+}
 
 /*
 
@@ -361,7 +373,7 @@ div.pswp__img--placeholder,
 }
 
 .pswp--zoom-allowed .pswp__button--zoom {
-  display: block;
+  display: none;
 }
 
 /* "+" => "-" */
