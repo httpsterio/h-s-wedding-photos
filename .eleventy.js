@@ -1,6 +1,6 @@
 const fs = require("fs");
-
 const { DateTime } = require("luxon");
+const htmlmin = require("html-minifier-terser");
 
 module.exports = function(eleventyConfig) {
   // Copy the `img` and `css` folders to the output
@@ -9,7 +9,19 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy("manifest.webmanifest");
 
   // Add plugins
+  eleventyConfig.addTransform("htmlmin", function(content, outputPath) {
+    // Eleventy 1.0+: use this.inputPath and this.outputPath instead
+    if( outputPath && outputPath.endsWith(".html") ) {
+      let minified = htmlmin.minify(content, {
+        useShortDoctype: true,
+        removeComments: true,
+        collapseWhitespace: true
+      });
+      return minified;
+    }
 
+    return content;
+  });
 
   // Get the first `n` elements of a collection.
   eleventyConfig.addFilter("head", (array, n) => {
